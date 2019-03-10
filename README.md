@@ -1,5 +1,6 @@
+##############################
 Adminpanel to manage companies.
-
+##############################
 Basically, project to manage companies and their employees. Mini-CRM.
 
 Basic Laravel Auth: ability to log in as administrator
@@ -23,8 +24,9 @@ Use Laravel’s validation function, using Request classes
 Use Laravel’s pagination for showing Companies/Employees list, 10 entries per page
 
 Use Laravel make:auth as default Bootstrap-based design theme, but remove ability to register
-
+#################################
 Extra Task for “Advanced” Juniors
+#################################
 If you feel like this task is too small and simple, you can add these things on top:
 
 Use more complicated front-end theme like AdminLTE
