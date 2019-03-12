@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class CompanyController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +15,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+        $companies = Company::all();
+        return view('company.index', compact('companies'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return view('company.create');
     }
 
     /**
@@ -35,7 +37,15 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required',
+            'logo' => 'required',
+            'website' => 'required'
+        ]);
+        $company = Company::create($validateData);
+
+        return redirect('index')->with('success', 'Company was successfully added');
     }
 
     /**
@@ -55,9 +65,11 @@ class CompanyController extends Controller
      * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function edit(Company $company)
+    public function edit($company)
     {
-        //
+        $company = Company::findOrFail($company);
+        //dd($company);
+        return view('company.edit', compact('company'));
     }
 
     /**
@@ -67,9 +79,17 @@ class CompanyController extends Controller
      * @param  \App\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Company $company)
+    public function update(Request $request, $company)
     {
-        //
+        $validateData = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required',
+            'logo' => 'required',
+            'website' => 'required'
+        ]);
+        Company::whereId($company)->update($validateData);
+
+        return redirect('index');
     }
 
     /**
