@@ -95,11 +95,14 @@ class CompanyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Company  $company
-     * @return \Illuminate\Http\Response
+     * @param $company
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function destroy(Company $company)
+    public function destroy($company)
     {
-        //
+        $company = Company::find($company);
+        $company->delete();
+
+        return redirect('index');
     }
 }

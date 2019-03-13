@@ -988,395 +988,400 @@
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="252" parent="233" name="PRIMARY">
+    <column id="252" parent="233" name="deleted_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="253" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="253" parent="234" name="id">
+    <column id="254" parent="234" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="234" name="firstname">
+    <column id="255" parent="234" name="firstname">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="234" name="lastname">
+    <column id="256" parent="234" name="lastname">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="234" name="company">
+    <column id="257" parent="234" name="company">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="234" name="email">
+    <column id="258" parent="234" name="email">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="234" name="phone">
+    <column id="259" parent="234" name="phone">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="234" name="created_at">
+    <column id="260" parent="234" name="created_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="234" name="updated_at">
+    <column id="261" parent="234" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="261" parent="234" name="PRIMARY">
+    <key id="262" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="262" parent="234" name="employees_id_foreign">
+    <foreign-key id="263" parent="234" name="employees_id_foreign">
       <ColNames>id</ColNames>
       <RefSchemaName>laravel</RefSchemaName>
       <RefTableName>companies</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="263" parent="235" name="id">
+    <column id="264" parent="235" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="235" name="migration">
+    <column id="265" parent="235" name="migration">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="235" name="batch">
+    <column id="266" parent="235" name="batch">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="266" parent="235" name="PRIMARY">
+    <key id="267" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="267" parent="236" name="email">
+    <column id="268" parent="236" name="email">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="236" name="token">
+    <column id="269" parent="236" name="token">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="236" name="created_at">
+    <column id="270" parent="236" name="created_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="270" parent="236" name="password_resets_email_index">
+    <index id="271" parent="236" name="password_resets_email_index">
       <ColNames>email</ColNames>
       <Type>btree</Type>
     </index>
-    <column id="271" parent="237" name="id">
+    <column id="272" parent="237" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="237" name="name">
+    <column id="273" parent="237" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="237" name="email">
+    <column id="274" parent="237" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="237" name="email_verified_at">
+    <column id="275" parent="237" name="email_verified_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="237" name="password">
+    <column id="276" parent="237" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="237" name="remember_token">
+    <column id="277" parent="237" name="remember_token">
       <Position>6</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="237" name="created_at">
+    <column id="278" parent="237" name="created_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="237" name="updated_at">
+    <column id="279" parent="237" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="279" parent="237" name="users_email_unique">
+    <index id="280" parent="237" name="users_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="280" parent="237" name="PRIMARY">
+    <key id="281" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="281" parent="237" name="users_email_unique">
+    <key id="282" parent="237" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>
-    <column id="282" parent="238" name="comment_id">
+    <column id="283" parent="238" name="comment_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="238" name="topic_id">
+    <column id="284" parent="238" name="topic_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="238" name="body">
+    <column id="285" parent="238" name="body">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="238" name="deleted_at">
+    <column id="286" parent="238" name="deleted_at">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="238" name="user_id">
+    <column id="287" parent="238" name="user_id">
       <Position>5</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="287" parent="238" name="topic_id">
+    <index id="288" parent="238" name="topic_id">
       <ColNames>topic_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="288" parent="238" name="user_id">
+    <index id="289" parent="238" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="289" parent="238" name="PRIMARY">
+    <key id="290" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>comment_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="290" parent="238" name="comments_ibfk_1">
+    <foreign-key id="291" parent="238" name="comments_ibfk_1">
       <ColNames>topic_id</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>topic</RefTableName>
       <RefColNames>topic_id</RefColNames>
     </foreign-key>
-    <foreign-key id="291" parent="238" name="comments_ibfk_2">
+    <foreign-key id="292" parent="238" name="comments_ibfk_2">
       <ColNames>user_id</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
-    <column id="292" parent="239" name="perm_id">
+    <column id="293" parent="239" name="perm_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="239" name="perm_name">
+    <column id="294" parent="239" name="perm_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="294" parent="239" name="PRIMARY">
+    <key id="295" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>perm_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="295" parent="240" name="role_id">
+    <column id="296" parent="240" name="role_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="240" name="perm_id">
+    <column id="297" parent="240" name="perm_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="297" parent="240" name="role_id">
+    <index id="298" parent="240" name="role_id">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="298" parent="240" name="perm_id">
+    <index id="299" parent="240" name="perm_id">
       <ColNames>perm_id</ColNames>
       <Type>btree</Type>
     </index>
-    <foreign-key id="299" parent="240" name="role_perm_ibfk_1">
+    <foreign-key id="300" parent="240" name="role_perm_ibfk_1">
       <ColNames>role_id</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>roles</RefTableName>
       <RefColNames>role_id</RefColNames>
     </foreign-key>
-    <foreign-key id="300" parent="240" name="role_perm_ibfk_2">
+    <foreign-key id="301" parent="240" name="role_perm_ibfk_2">
       <ColNames>perm_id</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>permissions</RefTableName>
       <RefColNames>perm_id</RefColNames>
     </foreign-key>
-    <column id="301" parent="241" name="role_id">
+    <column id="302" parent="241" name="role_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="241" name="role_name">
+    <column id="303" parent="241" name="role_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="303" parent="241" name="PRIMARY">
+    <key id="304" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>role_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="304" parent="242" name="topic_id">
+    <column id="305" parent="242" name="topic_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="242" name="user_id">
+    <column id="306" parent="242" name="user_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="242" name="name">
+    <column id="307" parent="242" name="name">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="242" name="body">
+    <column id="308" parent="242" name="body">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="242" name="deleted_at">
+    <column id="309" parent="242" name="deleted_at">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="309" parent="242" name="user_id">
+    <index id="310" parent="242" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="310" parent="242" name="PRIMARY">
+    <key id="311" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>topic_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="311" parent="242" name="topic_ibfk_1">
+    <foreign-key id="312" parent="242" name="topic_ibfk_1">
       <ColNames>user_id</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
-    <column id="312" parent="243" name="user_id">
+    <column id="313" parent="243" name="user_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="243" name="role_id">
+    <column id="314" parent="243" name="role_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="314" parent="243" name="user_id">
+    <index id="315" parent="243" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="315" parent="243" name="role_id">
+    <index id="316" parent="243" name="role_id">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <foreign-key id="316" parent="243" name="user_role_ibfk_1">
+    <foreign-key id="317" parent="243" name="user_role_ibfk_1">
       <ColNames>user_id</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>users</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
-    <foreign-key id="317" parent="243" name="user_role_ibfk_2">
+    <foreign-key id="318" parent="243" name="user_role_ibfk_2">
       <ColNames>role_id</ColNames>
       <RefSchemaName>test</RefSchemaName>
       <RefTableName>roles</RefTableName>
       <RefColNames>role_id</RefColNames>
     </foreign-key>
-    <column id="318" parent="244" name="user_id">
+    <column id="319" parent="244" name="user_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="244" name="name">
+    <column id="320" parent="244" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="244" name="password">
+    <column id="321" parent="244" name="password">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="244" name="deleted_at">
+    <column id="322" parent="244" name="deleted_at">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="244" name="last_access">
+    <column id="323" parent="244" name="last_access">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
@@ -1384,7 +1389,7 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <key id="323" parent="244" name="PRIMARY">
+    <key id="324" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
