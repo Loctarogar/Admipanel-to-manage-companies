@@ -10,7 +10,6 @@
     <form method="post" action="{{ route('company.destroy', $company->id) }}">
         @csrf
         @method('delete')
-        <input name="id" type="hidden" value="{{ $company->id }}">
         <input type="submit">
     </form>
 @endforeach

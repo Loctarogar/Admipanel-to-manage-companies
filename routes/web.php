@@ -28,4 +28,11 @@ Route::prefix('company')->name('company.')->group(function(){
     Route::delete('delete/{company}', 'CompanyController@destroy')->name('destroy');
 });
 
-
+Route::prefix('employee')->name('employee.')->group(function (){
+    Route::get('index', 'EmployeeController@index')->name('index');
+    Route::get('create', 'EmployeeController@create')->name('create');
+    Route::post('store', 'EmployeeController@store')->name('store');
+    Route::get('{employee}/edit', 'EmployeeController@edit')->name('edit');
+    Route::patch('update/{employee}', 'EmployeeController@update')->name('update');
+    Route::delete('delete/{employee}', 'EmployeeController@destroy')->name('destroy');
+});

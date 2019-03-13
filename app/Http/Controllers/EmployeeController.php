@@ -14,7 +14,9 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        $employees = Employee::all();
+
+        return view('employee.index', compact('employees'));
     }
 
     /**
@@ -24,7 +26,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+        return view('employee.create');
     }
 
     /**
@@ -35,7 +37,16 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'company' => 'required',
+            'email' => 'required',
+            'phone' => 'required'
+        ]);
+        Employee::create($validateData);
+
+        return redirect('employee/index');
     }
 
     /**
@@ -55,21 +66,32 @@ class EmployeeController extends Controller
      * @param  \App\Employee  $employee
      * @return \Illuminate\Http\Response
      */
-    public function edit(Employee $employee)
+    public function edit($employee)
     {
-        //
+        $employee = Employee::find($employee);
+
+        return view('employee.edit', compact('employee'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Employee  $employee
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param $employee
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function update(Request $request, Employee $employee)
+    public function update(Request $request, $employee)
     {
-        //
+        $validateData = $request->validate([
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'company' => 'required',
+            'email' => 'required',
+            'phone' => 'required'
+        ]);
+        Employee::whereId($employee)->update($validateData);
+
+        return redirect('employee/index');
     }
 
     /**
@@ -78,8 +100,11 @@ class EmployeeController extends Controller
      * @param  \App\Employee  $employee
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Employee $employee)
+    public function destroy($employee)
     {
-        //
+        $employee = Employee::find($employee);
+        $employee->delete();
+
+        return redirect('employee/index');
     }
 }
