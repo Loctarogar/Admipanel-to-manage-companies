@@ -5,7 +5,7 @@
     </title>
 </head>
 <body>
-<form method="post" action="{{ route('store') }}">
+<form method="post" action="{{ route('company.store') }}">
     @csrf
     Name: <br>
     <input name="name" type="text"><br>

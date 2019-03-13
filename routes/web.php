@@ -19,9 +19,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('index', 'CompanyController@index');
-Route::get('create', 'CompanyController@create');
-Route::post('store', 'CompanyController@store')->name('store');
-Route::get('{company}/edit', 'CompanyController@edit')->name('edit');
-Route::patch('update/{company}', 'CompanyController@update')->name('update');
-Route::delete('delete/{company}', 'CompanyController@destroy')->name('destroy');
+Route::prefix('company')->name('company.')->group(function(){
+    Route::get('index', 'CompanyController@index');
+    Route::get('create', 'CompanyController@create');
+    Route::post('store', 'CompanyController@store')->name('store');
+    Route::get('{company}/edit', 'CompanyController@edit')->name('edit');
+    Route::patch('update/{company}', 'CompanyController@update')->name('update');
+    Route::delete('delete/{company}', 'CompanyController@destroy')->name('destroy');
+});
+
+

@@ -4,7 +4,7 @@
 </head>
 <body>
 <h2>Edit Company</h2>
-<form method="post" action="{{ route('update', $company->id) }}">
+<form method="post" action="{{ route('company.update', $company->id) }}">
     @csrf
     @method('PATCH')
     Name: <br>

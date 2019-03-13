@@ -7,7 +7,7 @@
 <body>
 @foreach($companies as $company)
     <p>{{ $company }}</p>
-    <form method="post" action="{{ route('destroy', $company->id) }}">
+    <form method="post" action="{{ route('company.destroy', $company->id) }}">
         @csrf
         @method('delete')
         <input name="id" type="hidden" value="{{ $company->id }}">

@@ -45,7 +45,7 @@ class CompanyController extends Controller
         ]);
         $company = Company::create($validateData);
 
-        return redirect('index')->with('success', 'Company was successfully added');
+        return redirect('company/index');
     }
 
     /**
@@ -89,7 +89,7 @@ class CompanyController extends Controller
         ]);
         Company::whereId($company)->update($validateData);
 
-        return redirect('index');
+        return redirect('company/index');
     }
 
     /**
@@ -103,6 +103,6 @@ class CompanyController extends Controller
         $company = Company::find($company);
         $company->delete();
 
-        return redirect('index');
+        return redirect('company/index');
     }
 }
