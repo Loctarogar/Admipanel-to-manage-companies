@@ -36,3 +36,7 @@ Route::prefix('employee')->name('employee.')->group(function (){
     Route::patch('update/{employee}', 'EmployeeController@update')->name('update');
     Route::delete('delete/{employee}', 'EmployeeController@destroy')->name('destroy');
 });
+
+Route::prefix('admin')->name('admin.')->group(function (){
+    Route::get('index', 'AdminController@index')->name('index');
+});
