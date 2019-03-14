@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    <p>name -> 'somename', email = 'some@email.com', password -> 'password'</p>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
