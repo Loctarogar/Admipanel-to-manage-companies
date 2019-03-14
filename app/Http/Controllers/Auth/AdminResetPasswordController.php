@@ -49,4 +49,11 @@ class AdminResetPasswordController extends Controller
     {
         return Auth::guard("admin");
     }
+
+    public function showResetForm(Request $request, $token = null)
+    {
+        return view('auth.passwords.reset-admin')->with(
+            ['token' => $token, 'email' => $request->email]
+        );
+    }
 }
