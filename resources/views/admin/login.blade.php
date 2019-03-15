@@ -69,9 +69,6 @@
                 <a href="{{ route('admin.password.request') }}">I forgot my password</a>
             </p>
             @endif
-            <p class="mb-0">
-                <a href="register.html" class="text-center">Register a new membership</a>
-            </p>
         </div>
         <!-- /.login-card-body -->
     </div>

@@ -41,12 +41,16 @@ Route::prefix('admin')->name('admin.')->group(function (){
     Route::get('dashboard',       'AdminController@index')->name('dashboard');
     Route::get('logout',          'Auth\AdminLoginController@logout')->name('logout');
 
+    Route::get('register',        'Auth\AdminRegisterController@showRegistrationForm')->name('register');
+
     Route::post('password/email', 'Auth\AdminForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('password/reset',  'Auth\AdminForgotPasswordController@showLinkRequestForm')->name('password.request');
     Route::post('password/reset', 'Auth\AdminResetPasswordController@reset')->name('password.update');
     Route::get('password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('password.reset');
+
+
 });
 
-Route::post('userlogout', 'Auth\LoginController@userLogout')->name('userLogout');
 
+Route::post('userlogout', 'Auth\LoginController@userLogout')->name('userLogout');
 Auth::routes();
