@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Company;
+use App\Employee;
 
 class AdminController extends Controller
 {
@@ -23,6 +25,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $allCompanies = Company::all();
+        $allEmployees = Employee::all();
+        return view('admin.dashboard', compact('allCompanies', 'allEmployees'));
     }
 }

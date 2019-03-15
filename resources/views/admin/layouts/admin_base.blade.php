@@ -12,6 +12,8 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('admin/plugins/datatables/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin/dist/css/adminlte.min.css') }}">
     <!-- iCheck -->
     <link rel="stylesheet" href="{{ asset('admin/plugins/iCheck/square/blue.css') }}">
@@ -26,6 +28,9 @@
 <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- DataTables -->
+<script src="{{ asset('admin/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/datatables/dataTables.bootstrap4.min.js') }}"></script>
 <!-- SlimScroll -->
 <script src="{{ asset('admin/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
 <!-- FastClick -->
