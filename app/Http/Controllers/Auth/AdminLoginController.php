@@ -15,11 +15,12 @@ class AdminLoginController extends Controller
 
     public function showLoginForm()
     {
-        return view("auth.admin-login");
+        return view("admin.login");
     }
 
     public function login(Request $request)
     {
+        //dd($request);
         $this->validate($request,[
             "email" => "required|email",
             "password" => "required|min:6"
