@@ -25,8 +25,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $allCompanies = Company::all();
-        $allEmployees = Employee::all();
+        $allCompanies = Company::withTrashed()->get();
+        $allEmployees = Employee::withTrashed()->get();
         return view('admin.dashboard', compact('allCompanies', 'allEmployees'));
     }
 }
