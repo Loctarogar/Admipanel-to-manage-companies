@@ -6,9 +6,6 @@
 @section('sidebar')
     @include('admin.layouts.sidebar')
 @stop
-@section('footer')
-    @include('admin.layouts.footer')
-@stop
 
 @section('content')
     <!-- Content Wrapper. Contains page content -->
@@ -144,4 +141,7 @@
     </div>
     <!-- /.content-wrapper -->
 
+@stop
+@section('footer')
+    @include('admin.layouts.footer')
 @stop
