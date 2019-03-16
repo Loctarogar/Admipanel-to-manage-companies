@@ -43,6 +43,6 @@ class AdminController extends Controller
 
     public function getEmployees()
     {
-        return view('admin.Employees');
+        return view('admin.employees');
     }
 }
