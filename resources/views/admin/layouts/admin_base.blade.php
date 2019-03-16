@@ -20,8 +20,16 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+    <div class="wrapper">
 
-@yield('content')
+    @include('admin.layouts.navbar')
+    @include('admin.layouts.sidebar')
+
+    @yield('content')
+
+    @include('admin.layouts.footer')
 
 
 <!-- jQuery -->
@@ -48,6 +56,19 @@
             increaseArea : '20%' // optional
         })
     })
+</script>
+<script>
+    $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
+        });
+    });
 </script>
 </body>
 </html>
