@@ -24,9 +24,9 @@
 <!-- Site wrapper -->
     <div class="wrapper">
 
-    @include('admin.layouts.navbar')
-    @include('admin.layouts.sidebar')
 
+    @yield('navbar')
+    @yield('sidebar')
     @yield('content')
 
     @include('admin.layouts.footer')
