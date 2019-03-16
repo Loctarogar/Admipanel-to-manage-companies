@@ -35,4 +35,14 @@ class AdminController extends Controller
     {
         return view('admin.profile');
     }
+
+    public function getCompanies()
+    {
+        return view('admin.companies');
+    }
+
+    public function getEmployees()
+    {
+        return view('admin.Employees');
+    }
 }
