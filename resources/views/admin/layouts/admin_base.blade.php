@@ -28,8 +28,7 @@
     @yield('navbar')
     @yield('sidebar')
     @yield('content')
-
-    @include('admin.layouts.footer')
+    @yield('footer')
 
 
 <!-- jQuery -->
