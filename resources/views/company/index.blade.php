@@ -7,6 +7,7 @@
 <body>
 @foreach($companies as $company)
     <p>{{ $company }}</p>
+    <img src="{{ asset ('storage/app/avatars/public/app/avatars/LOW6Fc2TBH8UoexcXLntQkzncXSDN6OsIt7KLbiG.jpeg') }}">
     <form method="post" action="{{ route('company.destroy', $company->id) }}">
         @csrf
         @method('delete')

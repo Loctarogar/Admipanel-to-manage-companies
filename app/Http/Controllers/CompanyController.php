@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Company;
 use Illuminate\Http\Request;
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
 
 class CompanyController extends Controller
 {
@@ -41,12 +43,15 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
+        $file = $request->file('logo')->store('avatars');
         $validateData = $request->validate([
             'name' => 'required|max:255',
             'email' => 'required',
-            'logo' => 'required',
             'website' => 'required'
         ]);
+        $validateData['logo'] = $file;
+
         $company = Company::create($validateData);
 
         return redirect('company/index');
