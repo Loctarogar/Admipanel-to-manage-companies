@@ -44,7 +44,7 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         //dd($request);
-        $file = $request->file('logo')->store('avatars');
+        $file = $request->file('logo')->store('public/avatars');
         $validateData = $request->validate([
             'name' => 'required|max:255',
             'email' => 'required',
