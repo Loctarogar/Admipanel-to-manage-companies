@@ -10,7 +10,57 @@
 @section('content')
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <p>Employees Content</p>
+        <!-- Employees Table -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Employees</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <table id="example2" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Company</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Created</th>
+                        <th>Deleted</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($allEmployees as $employee)
+                        <tr>
+                            <td>{{ $employee->id }}</td>
+                            <td>{{ $employee->firstname }}</td>
+                            <td>{{ $employee->lastname }}</td>
+                            <td>{{ $employee->company }}</td>
+                            <td>{{ $employee->email }}</td>
+                            <td>{{ $employee->phone }}</td>
+                            <td>{{ $employee->created_at }}</td>
+                            <td>{{ $employee->deleted_at }}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Company</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Created</th>
+                        <th>Deleted</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
     </div>
 @stop
 

@@ -57,7 +57,7 @@
                                     <td>{{ $company->id }}</td>
                                     <td>{{ $company->name }}</td>
                                     <td>{{ $company->email }}</td>
-                                    <td><img src="{{ asset( 'app/avatars/LOW6Fc2TBH8UoexcXLntQkzncXSDN6OsIt7KLbiG.jpeg') }}"></td>
+                                    <td><img src="{{ asset( 'storage/'.$company->logo) }}" height="100" width="100"></td>
                                     <td>{{ $company->website }}</td>
                                     <td>{{ $company->created_at }}</td>
                                     <td>{{ $company->deleted_at }}</td>

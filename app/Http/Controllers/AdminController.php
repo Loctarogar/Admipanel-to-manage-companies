@@ -38,11 +38,13 @@ class AdminController extends Controller
 
     public function getCompanies()
     {
-        return view('admin.companies');
+        $allCompanies = Company::withTrashed()->get();
+        return view('admin.companies', compact('allCompanies'));
     }
 
     public function getEmployees()
     {
-        return view('admin.employees');
+        $allEmployees = Employee::withTrashed()->get();
+        return view('admin.employees', compact('allEmployees'));
     }
 }
