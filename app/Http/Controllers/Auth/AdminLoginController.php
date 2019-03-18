@@ -22,6 +22,7 @@ class AdminLoginController extends Controller
     {
         //dd($request);
         $this->validate($request,[
+
             "email" => "required|email",
             "password" => "required|min:6"
             ]);
