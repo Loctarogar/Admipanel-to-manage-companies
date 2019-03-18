@@ -19,7 +19,7 @@ class LastEnter
     {
         if(Auth::check()){
             $id = Auth::id();
-            Admin::whereId($id)->update(['last_enter' => now()]);
+            Admin::whereId($id)->update(['last_enter' => now("Europe/Moscow")]);
         }
 
         return $next($request);
