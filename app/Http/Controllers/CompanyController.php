@@ -50,7 +50,7 @@ class CompanyController extends Controller
             'email' => 'required',
             'website' => 'required'
         ]);
-        $validateData['logo'] = $file;
+        $validateData['logo'] = substr($file,7); //TODO
 
         $company = Company::create($validateData);
 
