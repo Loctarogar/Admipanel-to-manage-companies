@@ -47,8 +47,8 @@ Route::prefix('admin')->name('admin.')->group(function (){
 
     Route::get('dashboard',       'AdminController@index')->name('dashboard');
     Route::get('profile',         'AdminController@getUser')->name('profile');
-    Route::get('companies',       'AdminController@getCompanies')->name('companies');
-    Route::get('employees',       'AdminController@getEmployees')->name('employees');
+    Route::get('companies',       'AdminController@getCompanies')->name('companies')->middleware('lastEnter');
+    Route::get('employees',       'AdminController@getEmployees')->name('employees')->middleware('lastEnter');
 });
 
 

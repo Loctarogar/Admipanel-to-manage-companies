@@ -21,7 +21,8 @@ class LastEnter
             $id = Auth::id();
             Admin::whereId($id)->update(['last_enter' => now("Europe/Moscow")]);
         }
+        $response = $next($request);
 
-        return $next($request);
+        return $response;
     }
 }
