@@ -55,7 +55,7 @@
                                 @foreach($allCompanies as $company)
                                 <tr>
                                     <td>{{ $company->id }}</td>
-                                    <td>{{ $company->name }}</td>
+                                    <td><a href="{{ route('admin.company', $company->id) }}" >{{ $company->name }}</a></td>
                                     <td>{{ $company->email }}</td>
                                     <td><img src="{{ asset( 'storage/'.$company->logo) }}" height="100" width="100"></td>
                                     <td>{{ $company->website }}</td>
@@ -105,7 +105,7 @@
                                 @foreach($allEmployees as $employee)
                                     <tr>
                                         <td>{{ $employee->id }}</td>
-                                        <td>{{ $employee->firstname }}</td>
+                                        <td><a href="{{ route('admin.employee', $employee->id) }}">{{ $employee->firstname }}</a></td>
                                         <td>{{ $employee->lastname }}</td>
                                         <td>{{ $employee->company }}</td>
                                         <td>{{ $employee->email }}</td>

@@ -33,7 +33,7 @@
                     @foreach($allCompanies as $company)
                         <tr>
                             <td>{{ $company->id }}</td>
-                            <td>{{ $company->name }}</td>
+                            <td><a href="{{ route('admin.company', $company->id) }}" >{{ $company->name }}</a></td>
                             <td>{{ $company->email }}</td>
                             <td><img src="{{ asset( 'storage/'.$company->logo) }}" height="100" width="100"></td>
                             <td>{{ $company->website }}</td>

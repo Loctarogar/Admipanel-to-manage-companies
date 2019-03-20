@@ -59,14 +59,14 @@ class AdminController extends Controller
 
     public function singleCompany($id)
     {
-        $company = Company::findOrFail($id);
+        $company = Company::withTrashed()->findOrFail($id);
 
         return view('admin.singleCompany', compact('company'));
     }
 
     public function singleEmployee($id)
     {
-        $employee = Employee::findOrFail($id);
+        $employee = Employee::withTrashed()->findOrFail($id);
 
         return view('admin.singleEmployee', compact('employee'));
     }
