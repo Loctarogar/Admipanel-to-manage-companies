@@ -47,10 +47,17 @@ Route::prefix('admin')->name('admin.')->group(function (){
 
     Route::get('dashboard',       'AdminController@index')->name('dashboard');
     Route::get('profile',         'AdminController@getUser')->name('profile');
+
     Route::get('companies',       'AdminController@getCompanies')->name('companies')->middleware('lastEnter');
     Route::get('employees',       'AdminController@getEmployees')->name('employees')->middleware('lastEnter');
+
     Route::get('company/{id}',  'AdminController@singleCompany')->name('company');
     Route::get('employee/{id}', 'AdminController@singleEmployee')->name('employee');
+
+    Route::delete('company/delete/{id}', 'AdminController@destroyCompany')->name('company.destroy');
+    Route::get('company/restore/{id}', "AdminController@restoreCompany")->name('company.restore');
+    Route::delete('employee/delete/{id}', 'AdminController@destroyEmployee')->name('employee.destroy');
+    Route::get('employee/restore/{id}', "AdminController@restoreEmployee")->name('employee.restore');
 });
 
 

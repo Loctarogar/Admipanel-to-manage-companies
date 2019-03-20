@@ -81,4 +81,42 @@ class AdminController extends Controller
         $newEmployees = DB::table('employees')->where('created_at', '>', $time)->get();
         session(['newCompanies' => $newCompanies, 'newEmployees' => $newEmployees]);
     }
+
+    /**
+     * @param $company
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function destroyCompany($company)
+    {
+        $company = Company::find($company);
+        $company->delete();
+
+        return redirect('admin/companies');
+    }
+
+    public function restoreCompany($company)
+    {
+        $company = Company::withTrashed()->find($company);
+        $company->deleted_at = null;
+        $company->save();
+
+        return redirect('admin/companies');
+    }
+
+    public function destroyEmployee($employee)
+    {
+        $company = Employee::find($employee);
+        $company->delete();
+
+        return redirect('admin/employees');
+    }
+
+    public function restoreEmployee($employee)
+    {
+        $company = Employee::withTrashed()->find($employee);
+        $company->deleted_at = null;
+        $company->save();
+
+        return redirect('admin/employees');
+    }
 }
