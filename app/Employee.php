@@ -9,7 +9,11 @@ class Employee extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['firstname', 'lastname', 'company', 'email', 'phone'];
+    protected $fillable = ['firstname', 'company', 'email', 'phone'];
     protected $table = 'employees';
     //
+    public function companies()
+    {
+        return $this->belongsTo('App\Company', 'company_id');
+    }
 }
