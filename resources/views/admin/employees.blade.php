@@ -37,7 +37,9 @@
                             <td><a href="{{ route('admin.employee', $employee->id) }}">{{ $employee->firstname }}</a></td>
                             <td>{{ $employee->lastname }}</td>
                             <td>
+                                @if($employee->companies)
                                 {{ $employee->companies->name }}
+                                @endif
                             </td>
                             <td>{{ $employee->email }}</td>
                             <td>{{ $employee->phone }}</td>
