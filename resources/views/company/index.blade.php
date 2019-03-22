@@ -11,7 +11,7 @@
     <form method="post" action="{{ route('company.destroy', $company->id) }}">
         @csrf
         @method('delete')
-        <input type="submit">
+        <input type="submit" value="Delete">
     </form>
 @endforeach
 </body>

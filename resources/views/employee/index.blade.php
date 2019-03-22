@@ -9,7 +9,7 @@
     <form method="post" action="{{ route('employee.destroy', $employee->id) }}">
         @csrf
         @method('delete')
-        <input type="submit">
+        <input type="submit" value="Delete">
     </form>
 @endforeach
 </body>
