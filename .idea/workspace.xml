@@ -85,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/auth.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/email-admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/reset-admin.blade.php" />
@@ -136,6 +135,7 @@
         <option value="$PROJECT_DIR$/database/seeds/CompaniesTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/EmployeesTableSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -244,28 +244,6 @@
               <item name="laravel-admin-panel" type="b2602c69:ProjectViewProjectNode" />
               <item name="laravel-admin-panel" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="laravel-admin-panel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel-admin-panel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravel-admin-panel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel-admin-panel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravel-admin-panel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel-admin-panel" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="laravel-admin-panel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel-admin-panel" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -349,12 +327,12 @@
       <workItem from="1553092790095" duration="4899000" />
       <workItem from="1553108247648" duration="1151000" />
       <workItem from="1553269627237" duration="4681000" />
-      <workItem from="1553274786499" duration="4980000" />
+      <workItem from="1553274786499" duration="5242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145399000" />
+    <option name="totallyTimeSpent" value="145661000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -368,7 +346,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1915403" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1915403" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -381,7 +359,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22638437" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22638437" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -420,11 +398,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-03-17.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10686" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/app/public/avatars/dlGrrf8OO61RAhk18aMBu8IUbEIfF9pQaGcv9nOy.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -747,6 +720,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
