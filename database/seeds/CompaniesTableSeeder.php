@@ -16,6 +16,7 @@ class CompaniesTableSeeder extends Seeder
             'email' => Str::random(10).'@gmail.com',
             'logo' => Str::random(10),
             'website' => Str::random(8).'.com',
+            'user_id' => '1',
             'created_at' => NOW(),
             'updated_at' => NOW()
         ]);
@@ -24,6 +25,7 @@ class CompaniesTableSeeder extends Seeder
             'email' => Str::random(10).'@gmail.com',
             'logo' => Str::random(10),
             'website' => Str::random(8).'.com',
+            'user_id' => '1',
             'created_at' => NOW(),
             'updated_at' => NOW()
         ]);
@@ -32,6 +34,7 @@ class CompaniesTableSeeder extends Seeder
             'email' => Str::random(10).'@gmail.com',
             'logo' => Str::random(10),
             'website' => Str::random(8).'.com',
+            'user_id' => '1',
             'created_at' => NOW(),
             'updated_at' => NOW()
         ]);
