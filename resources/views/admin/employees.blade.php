@@ -23,7 +23,7 @@
                         <th>Id</th>
                         <th>First name</th>
                         <th>Last name</th>
-                        <th>Company</th>
+                        <th>Company name</th>
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Created</th>
@@ -36,7 +36,9 @@
                             <td>{{ $employee->id }}</td>
                             <td><a href="{{ route('admin.employee', $employee->id) }}">{{ $employee->firstname }}</a></td>
                             <td>{{ $employee->lastname }}</td>
-                            <td>{{ $employee->company }}</td>
+                            <td>
+                                {{ $employee->companies->name }}
+                            </td>
                             <td>{{ $employee->email }}</td>
                             <td>{{ $employee->phone }}</td>
                             <td>{{ $employee->created_at }}</td>

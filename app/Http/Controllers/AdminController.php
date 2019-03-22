@@ -75,11 +75,11 @@ class AdminController extends Controller
     {
         $user = Admin::where('id', Auth::id())->get();
         $time = $user[0]->last_enter;
-        //$newCompanies = Company::where('created_at', '>', $time)->get();
-        //TODO : i have to query with 'DB' to get companies with 'deleted_at' not null
-        $newCompanies = DB::table('companies')->where('created_at', '>', $time)->get();
-        $newEmployees = DB::table('employees')->where('created_at', '>', $time)->get();
-        session(['newCompanies' => $newCompanies, 'newEmployees' => $newEmployees]);
+        if(null !== $time){
+            $newCompanies = DB::table('companies')->where('created_at', '>', $time)->get();
+            $newEmployees = DB::table('employees')->where('created_at', '>', $time)->get();
+            session(['newCompanies' => $newCompanies, 'newEmployees' => $newEmployees]);
+        }
     }
 
     /**
