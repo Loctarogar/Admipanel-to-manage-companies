@@ -60,7 +60,8 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'lastEnter' =>\App\Http\Middleware\LastEnter::class,
+        'lastEnter' => \App\Http\Middleware\LastEnter::class,
+        'canDeleteCompany' => \App\Http\Middleware\CheckPermissionToDeleteCompany::class,
     ];
 
     /**
