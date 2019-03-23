@@ -32,7 +32,7 @@ Route::prefix('employee')->name('employee.')->group(function (){
     Route::post('store', 'EmployeeController@store')->name('store');
     Route::get('{employee}/edit',      'EmployeeController@edit')->name('edit');
     Route::patch('update/{employee}',  'EmployeeController@update')->name('update');
-    Route::delete('delete/{employee}', 'EmployeeController@destroy')->name('destroy');
+    Route::delete('delete/{employee}', 'EmployeeController@destroy')->name('destroy')->middleware('canDeleteEmployee');
 });
 
 Route::prefix('admin')->name('admin.')->group(function (){

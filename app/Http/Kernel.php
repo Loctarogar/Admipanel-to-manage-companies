@@ -62,6 +62,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'lastEnter' => \App\Http\Middleware\LastEnter::class,
         'canDeleteCompany' => \App\Http\Middleware\CheckPermissionToDeleteCompany::class,
+        'canDeleteEmployee' => \App\Http\Middleware\CheckPermissionToDeleteEmployee::class,
     ];
 
     /**
