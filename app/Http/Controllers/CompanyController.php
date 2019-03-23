@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Company;
+use App\Mail\CompanyCreatedSendMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 
@@ -43,17 +46,18 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
+
         $file = $request->file('logo')->store('public/avatars');
         $validateData = $request->validate([
             'name' => 'required|max:255',
             'email' => 'required',
             'website' => 'required'
         ]);
+        $id = Auth::id();
         $validateData['logo'] = substr($file,7); //TODO
-
+        $validateData['user_id'] = $id;
         $company = Company::create($validateData);
-
+        Mail::to($request->email)->send(new CompanyCreatedSendMail());
         return redirect('company/index');
     }
 
