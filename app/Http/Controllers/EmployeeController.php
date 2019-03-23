@@ -90,9 +90,6 @@ class EmployeeController extends Controller
         $validateData = $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
-            'company' => 'required',
-            'email' => 'required',
-            'phone' => 'required'
         ]);
         Employee::whereId($employee)->update($validateData);
 

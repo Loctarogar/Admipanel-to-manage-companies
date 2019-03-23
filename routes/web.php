@@ -22,7 +22,7 @@ Route::prefix('company')->name('company.')->group(function(){
     Route::get('create', 'CompanyController@create');
     Route::post('store', 'CompanyController@store')->name('store');
     Route::get('{company}/edit', 'CompanyController@edit')->name('edit');
-    Route::patch('update/{company}', 'CompanyController@update')->name('update');
+    Route::patch('update/{company}', 'CompanyController@update')->name('update')->middleware('canDeleteCompany');
     Route::delete('delete/{company}', 'CompanyController@destroy')->name('destroy')->middleware('canDeleteCompany');
 });
 

@@ -12,6 +12,10 @@
         @method('delete')
         <input type="submit" value="Delete">
     </form>
+    <form method="get" action="{{ route('employee.edit', $employee->id) }}">
+        @csrf
+        <input type="submit" value="Edit">
+    </form>
     @endif
 @endforeach
 </body>
