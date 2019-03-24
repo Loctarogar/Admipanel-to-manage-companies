@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Employee;
+use App\Mail\EmployeeCreatedSendMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class EmployeeController extends Controller
 {
@@ -45,11 +47,12 @@ class EmployeeController extends Controller
         $validateData = $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
-            'company' => 'required',
+            'company_id' => 'required',
             'email' => 'required',
             'phone' => 'required'
         ]);
         Employee::create($validateData);
+        Mail::to($request->email)->send(new EmployeeCreatedSendMail());
 
         return redirect('employee/index');
     }

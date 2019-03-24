@@ -10,7 +10,7 @@
     Last name: <br>
     <input name="lastname" type="text"><br>
     Company: <br>
-    <input name="company" type="text"><br>
+    <input name="company_id" type="text"><br>
     Email: <br>
     <input name="email" type="text"><br>
     Phone: <br>
