@@ -54,7 +54,7 @@ class CompanyController extends Controller
             'website' => 'required'
         ]);
         $id = Auth::id();
-        $validateData['logo'] = substr($file,7); //TODO
+        $validateData['logo'] = substr($file,7);
         $validateData['user_id'] = $id;
         $company = Company::create($validateData);
         Mail::to($request->email)->send(new CompanyCreatedSendMail());

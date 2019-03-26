@@ -9,5 +9,6 @@ $factory->define(App\Company::class, function (Faker $faker) {
         'logo' => 'testCompanyFactoryLogo',
         'website' => 'testCompanyFactoryWebsite.com',
         'user_id' => 1,
+        'deleted_at' => null,
     ];
 });

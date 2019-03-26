@@ -5,6 +5,7 @@
 <body>
 @if($company)
 <p>{{ $company }}</p>
+<p>{{ $company->name }}</p>
 @endif
 </body>
 </html>
