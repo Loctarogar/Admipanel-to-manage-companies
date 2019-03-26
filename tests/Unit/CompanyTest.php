@@ -14,18 +14,9 @@ class CompanyTest extends TestCase
      */
     public function testCanStoreCompany()
     {
-        $data = [
-            'name' => 'somefakename',
-            'email' => 'somefake@mail.com',
-            'logo' => 'logo',
-            'website' => 'website.com',
-            'user_id' => 1,
-        ];
-
-        $company = new Company($data);
-
+        $company = factory(Company::class)->create();
         $this->assertInstanceOf(Company::class, $company);
-        $this->assertEquals($data['name'], $company->name);
+        $this->assertEquals('testCompanyFactory', $company->name);
     }
 
 
