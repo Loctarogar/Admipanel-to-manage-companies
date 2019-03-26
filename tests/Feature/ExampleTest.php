@@ -18,18 +18,4 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
-
-    public function testHomePageTest()
-    {
-        $response = $this->get('/home');
-
-        $response->assertStatus(302);
-    }
-
-    public function testAdminDashboard()
-    {
-        $response = $this->get('/admin/dashboard');
-
-        $response->assertStatus(302);
-    }
 }

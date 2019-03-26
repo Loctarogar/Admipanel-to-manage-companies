@@ -12,6 +12,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class CompanyTest extends TestCase
 {
     use DatabaseTransactions;
+
     /**
      *
      */
