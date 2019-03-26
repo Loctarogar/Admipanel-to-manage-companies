@@ -21,6 +21,7 @@ Route::prefix('company')->name('company.')->group(function(){
     Route::get('index', 'CompanyController@index');
     Route::get('create', 'CompanyController@create');
     Route::post('store', 'CompanyController@store')->name('store');
+    Route::get('show/{id}', 'CompanyController@show')->name('show');
     Route::get('{company}/edit', 'CompanyController@edit')->name('edit');
     Route::patch('update/{company}', 'CompanyController@update')->name('update')->middleware('canDeleteCompany');
     Route::delete('delete/{company}', 'CompanyController@destroy')->name('destroy')->middleware('canDeleteCompany');
@@ -30,6 +31,7 @@ Route::prefix('employee')->name('employee.')->group(function (){
     Route::get('index',  'EmployeeController@index')->name('index');
     Route::get('create', 'EmployeeController@create')->name('create');
     Route::post('store', 'EmployeeController@store')->name('store');
+    Route::get('show/{id}', 'EmployeeController@show')->name('show');
     Route::get('{employee}/edit',      'EmployeeController@edit')->name('edit');
     Route::patch('update/{employee}',  'EmployeeController@update')->name('update');
     Route::delete('delete/{employee}', 'EmployeeController@destroy')->name('destroy')->middleware('canDeleteEmployee');

@@ -64,12 +64,14 @@ class CompanyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Company  $company
-     * @return \Illuminate\Http\Response
+     * @param $company
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show(Company $company)
+    public function show($company)
     {
-        //
+        $company = Company::findOrFail($company);
+
+        return view('company.showSingle', compact('company'));
     }
 
     /**
